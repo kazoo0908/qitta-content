@@ -5,10 +5,10 @@ tags:
   - プロダクトマネジメント
   - データ分析
   - 初心者
-  - PMM
+  - pmm
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-08-31T12:33:00+09:00'
+id: 92115488aa0e9430e3ca
 organization_url_name: null
 slide: false
 ignorePublish: false
