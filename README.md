@@ -4,6 +4,65 @@ Markdown
 Qiita CLI を活用して、Qiita（キータ）の記事を GitHub 上でバージョン管理・自動投稿するためのリポジトリです。
 
 ---
+## 📁 記事公開方法
+4. 記事の作成・編集（front-matter の設定）
+投稿・更新対象の Markdown ファイルは public/ ディレクトリ内に配置し、ファイル先頭に front-matter（ヘッダー情報）を記述します。
+
+📄 新規投稿の場合
+id を null に設定します。投稿成功時に自動的に ID が付与されます。
+
+Markdown
+---
+title: 記事のタイトル
+tags:
+  - Qiita
+  - GitHub
+private: false
+updated_at: ''
+id: null
+organization_url_name: null
+slide: false
+ignorePublish: false
+---
+
+ここから本文を開始します...
+🔄 既存記事を更新・上書きする場合
+id に Qiita 上の既存記事の ID を直接指定します。
+（例: https://qiita.com/username/items/123456789abcdef01234 の場合は 123456789abcdef01234）
+
+Markdown
+---
+title: 更新後の記事タイトル
+tags:
+  - Qiita
+  - GitHub
+private: false
+updated_at: ''
+id: '123456789abcdef01234'
+organization_url_name: null
+slide: false
+ignorePublish: false
+---
+
+ここから更新後の本文を記述します...
+5. 記事の投稿・更新（Publish）
+編集が完了したら、以下のコマンドで Qiita へ反映させます。
+
+Bash
+npx qiita publish
+id: null のファイル ➔ 新規記事として投稿
+
+id: 'xxxx' のファイル ➔ 対象の既存記事を更新
+
+## 📁 記事更新方法
+
+編集が完了したら、以下のコマンドで Qiita へ反映させます。
+
+Bash
+npx qiita publish
+id: null のファイル ➔ 新規記事として投稿
+
+id: 'xxxx' のファイル ➔ 対象の既存記事を更新
 
 ## 📁 フォルダ構成
 
